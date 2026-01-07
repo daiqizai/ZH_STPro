@@ -1,0 +1,27 @@
+# Keil uVision 中间文件
+*.uvopt
+*.uvguix
+*.uvprojx.user
+*.bak
+*.hex
+*.axf
+*.o
+*.a
+*.d
+*.elf
+*.map
+*.lst
+*.bin
+*.srec
+*.log
+*.crf
+*.htm
+*.lnp
+*.sct
+*.dep
+
+# 临时文件
+*.tmp
+*.swp
+*.DS_Store
+*.uvoptx
