@@ -10,7 +10,7 @@
       <TargetName>Prototype_Stm32</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060960::V5.06 update 7 (build 960)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -186,6 +186,7 @@
             <RvdsVP>2</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -393,6 +394,11 @@
         <Group>
           <GroupName>Application/User/Core</GroupName>
           <Files>
+            <File>
+              <FileName>demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\demo.c</FilePath>
+            </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
@@ -1604,6 +1610,31 @@
               <FileName>serial_frame.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Platform\SERIAL_FRAME\serial_frame.c</FilePath>
+            </File>
+            <File>
+              <FileName>atk_ms6dsv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\IMU\atk_ms6dsv.c</FilePath>
+            </File>
+            <File>
+              <FileName>atk_ms6dsv_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\IMU\atk_ms6dsv_iic.c</FilePath>
+            </File>
+            <File>
+              <FileName>lsm6dsv16x_reg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\IMU\lsm6dsv16x_reg.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\IMU\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>sys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\IMU\sys.c</FilePath>
             </File>
           </Files>
         </Group>

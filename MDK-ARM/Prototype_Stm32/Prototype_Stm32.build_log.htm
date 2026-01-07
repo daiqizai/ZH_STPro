@@ -3,54 +3,100 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.32.0.0
-Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: xsw xsw, xsw, LIC=47GU5-GL2G4-8T03P-MZFXT-L82HK-I4FBD
+IDE-Version: ¦ÌVision V5.40.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: HBS ZEHO, HBS, LIC=EPPLD-81LWQ-TLICD-897V2-3ATNE-7BDHN
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.32.0.0
-Toolchain Path:  D:\zrh\MDK5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.32.0.0
-Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
-Dialog DLL:      TCM.DLL V1.46.0.0
+Toolchain:       MDK-ARM Professional  Version: 5.40.0.3
+Toolchain Path:  D:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.40.0.3
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\q'l\Desktop\Prototype_Stm32\MDK-ARM\Prototype_Stm32.uvprojx
-Project File Date:  01/05/2026
+C:\Users\ZEHO\Desktop\test\ZH_STPro\MDK-ARM\Prototype_Stm32.uvprojx
+Project File Date:  01/07/2026
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\zrh\MDK5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Prototype_Stm32'
-"Prototype_Stm32\Prototype_Stm32.axf" - 0 Error(s), 0 Warning(s).
+Note: source file '..\Platform\IMU\atk_ms6dsv.c' - object file renamed from 'Prototype_Stm32\atk_ms6dsv.o' to 'Prototype_Stm32\atk_ms6dsv_1.o'.
+Note: source file '..\Platform\IMU\atk_ms6dsv_iic.c' - object file renamed from 'Prototype_Stm32\atk_ms6dsv_iic.o' to 'Prototype_Stm32\atk_ms6dsv_iic_1.o'.
+Note: source file '..\Platform\IMU\lsm6dsv16x_reg.c' - object file renamed from 'Prototype_Stm32\lsm6dsv16x_reg.o' to 'Prototype_Stm32\lsm6dsv16x_reg_1.o'.
+compiling freertos.c...
+../Platform/Motor/act.h(44): warning:  #1295-D: Deprecated declaration Car_Init - give arg types
+  void Car_Init();
+../Platform/Motor/act.h(45): warning:  #1295-D: Deprecated declaration GoAhead - give arg types
+  void GoAhead();
+../Platform/Motor/act.h(46): warning:  #1295-D: Deprecated declaration SlowDown - give arg types
+  void SlowDown();
+../Platform/Motor/act.h(47): warning:  #1295-D: Deprecated declaration GoBack - give arg types
+  void GoBack();
+../Platform/Motor/act.h(48): warning:  #1295-D: Deprecated declaration TurnRight - give arg types
+  void TurnRight();
+../Platform/Motor/act.h(49): warning:  #1295-D: Deprecated declaration TurnLeft - give arg types
+  void TurnLeft();
+../Platform/Motor/act.h(50): warning:  #1295-D: Deprecated declaration Stop - give arg types
+  void Stop();
+../Platform/Motor/act.h(51): warning:  #1295-D: Deprecated declaration FeedBack - give arg types
+  void FeedBack();
+../Platform/Motor/act.h(53): warning:  #1295-D: Deprecated declaration ArmUpDown - give arg types
+  void ArmUpDown();
+../Platform/Motor/act.h(54): warning:  #1295-D: Deprecated declaration ArmFrontBack - give arg types
+  void ArmFrontBack();
+../Code/user_main.h(44): warning:  #1295-D: Deprecated declaration bsp_init - give arg types
+  void bsp_init();
+../Code/user_main.h(45): warning:  #1295-D: Deprecated declaration user_main - give arg types
+  void user_main();
+../Core/Src/freertos.c(164): warning:  #177-D: variable "rx_len"  was declared but never referenced
+    uint16_t rx_len;
+../Core/Src/freertos.c(300): warning:  #177-D: variable "I2C_data"  was declared but never referenced
+  	uint8_t I2C_data[10];
+../Core/Src/freertos.c(334): warning:  #111-D: statement is unreachable
+          break;
+../Core/Src/freertos.c(340): warning:  #111-D: statement is unreachable
+          break;
+../Core/Src/freertos.c(345): warning:  #111-D: statement is unreachable
+          break;
+../Core/Src/freertos.c(353): warning:  #111-D: statement is unreachable
+          break;
+../Core/Src/freertos.c(358): warning:  #111-D: statement is unreachable
+          break;
+../Core/Src/freertos.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=26108 RO-data=908 RW-data=220 ZI-data=26660  
+FromELF: creating hex file...
+"Prototype_Stm32\Prototype_Stm32.axf" - 0 Error(s), 19 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
-                ARM.CMSIS.5.7.0
-                CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.4.0
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
 
 Package Vendor: Keil
                 https://www.keil.com/pack/Keil.STM32F4xx_DFP.3.1.1.pack
-                Keil.STM32F4xx_DFP.3.1.1
+                Keil::STM32F4xx_DFP@3.1.1
                 STMicroelectronics STM32F4 Series Device Support
 
 <h2>Collection of Component include folders:</h2>
-  .\RTE\_Prototype_Stm32
-  D:\zrh\MDK5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  ./RTE/_Prototype_Stm32
+  D:/Users/ZEHO/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.4.0
-      Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+   * Component: ARM::CMSIS:CORE@6.1.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
