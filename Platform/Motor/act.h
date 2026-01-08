@@ -40,7 +40,7 @@ extern xUART_TypeDef xUART2;
 
 #define STEPPER_FORWARD  0
 #define STEPPER_BACKWARD 1
-
+void ArmWave();
 void Car_Init();
 void GoAhead();
 void SlowDown();

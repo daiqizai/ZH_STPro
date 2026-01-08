@@ -49,7 +49,11 @@ Dma.USART6_RX.3.Priority=DMA_PRIORITY_MEDIUM
 Dma.USART6_RX.3.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,FIFOMode
 FREERTOS.FootprintOK=true
 FREERTOS.IPParameters=Tasks01,FootprintOK
+<<<<<<< HEAD
 FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;fun_ctrl_task,11,512,fun_ctrl_Task,Default,NULL,Dynamic,NULL,NULL;status_task,8,512,Status_Task,Default,NULL,Dynamic,NULL,NULL;imuTask,32,512,StartImuTask,Default,NULL,Dynamic,NULL,NULL
+=======
+FREERTOS.Tasks01=defaultTask,24,512,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;fun_ctrl_task,11,512,fun_ctrl_Task,Default,NULL,Dynamic,NULL,NULL;status_task,8,512,Status_Task,Default,NULL,Dynamic,NULL,NULL
+>>>>>>> bba6d704549fb19bcc19de70abb1afb01ebc9eee
 File.Version=6
 GPIO.groupedBy=Group By Peripherals
 KeepUserPlacement=false
@@ -340,7 +344,8 @@ TIM4.Channel-PWM\ Generation1\ CH1=TIM_CHANNEL_1
 TIM4.Channel-PWM\ Generation2\ CH2=TIM_CHANNEL_2
 TIM4.Channel-PWM\ Generation3\ CH3=TIM_CHANNEL_3
 TIM4.Channel-PWM\ Generation4\ CH4=TIM_CHANNEL_4
-TIM4.IPParameters=Channel-PWM Generation1 CH1,Channel-PWM Generation2 CH2,Channel-PWM Generation3 CH3,Channel-PWM Generation4 CH4,Prescaler
+TIM4.IPParameters=Channel-PWM Generation1 CH1,Channel-PWM Generation2 CH2,Channel-PWM Generation3 CH3,Channel-PWM Generation4 CH4,Prescaler,Period
+TIM4.Period=1999
 TIM4.Prescaler=1
 USART1.IPParameters=VirtualMode
 USART1.VirtualMode=VM_ASYNC

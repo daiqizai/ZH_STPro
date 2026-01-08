@@ -63,7 +63,7 @@ void Error_Handler(void);
 #define scl_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define ARRAY_LENGTH(arr)  (sizeof(arr) / sizeof((arr)[0]))
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
