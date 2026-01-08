@@ -1605,6 +1605,11 @@
               <FileType>1</FileType>
               <FilePath>..\Platform\SERIAL_FRAME\serial_frame.c</FilePath>
             </File>
+            <File>
+              <FileName>Neck.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Platform\Motor\Neck.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

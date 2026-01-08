@@ -41,6 +41,7 @@
 "prototype_stm32\motor.o"
 "prototype_stm32\stepmotor.o"
 "prototype_stm32\serial_frame.o"
+"prototype_stm32\neck.o"
 "prototype_stm32\user_main.o"
 --strict --scatter "Prototype_Stm32\Prototype_Stm32.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

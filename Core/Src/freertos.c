@@ -52,7 +52,7 @@
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 128 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for fun_ctrl_task */
@@ -109,7 +109,7 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
 	
-	uartQueue = xQueueCreate(8,sizeof(uart_frame_t));
+	uartQueue = xQueueCreate(4,sizeof(uart_frame_t));
 	configASSERT(uartQueue != NULL);
 	
   /* USER CODE END RTOS_QUEUES */
@@ -148,7 +148,6 @@ void StartDefaultTask(void *argument)
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
 	printf("StartDefaultTask\r\n");
-	
   uint16_t rx_len;
 	uart_frame_t frame;
 	uint8_t tx_buf[32];
@@ -171,15 +170,12 @@ void StartDefaultTask(void *argument)
 								{
 												cmd.linear_x_mm_s =
 									(int16_t)((pkt.data[0] << 8) | pkt.data[1]);
-
 												cmd.angular_z_mrad =
 									(int16_t)((pkt.data[2] << 8) | pkt.data[3]);
 
 					
-
-									  Motor_SetSpeed_FromCmd(&cmd, 50);
-										//GoAhead();
-									  //send cmd and v to uart2 
+									  Motor_SetSpeed_FromCmd(&cmd, 100);
+									  //send cmd and v 
 										uint8_t ack_data[] = {0x00};
 										tx_len = serial_frame_build(0x81, ack_data, 1,tx_buf, sizeof(tx_buf));
 										HAL_UART_Transmit(&huart6, tx_buf, tx_len, 100);
@@ -188,7 +184,7 @@ void StartDefaultTask(void *argument)
                 
                 case 0x02:
 								{
-									  //ArmFrontBack();
+									  ArmFrontBack();
 										uint8_t ack_data[] = {0x00};
 										tx_len = serial_frame_build(0x82, ack_data, 1,tx_buf, sizeof(tx_buf));
 										HAL_UART_Transmit(&huart6, tx_buf, tx_len, 100);
@@ -237,9 +233,11 @@ void fun_ctrl_Task(void *argument)
 	
 	fsm_lib_start(&main_ctrl_fsm_handle);
   /* Infinite loop */
-	//GoAhead();
-	//Stop();
-	//ArmFrontBack();
+	//ArmUpDown();
+//	Stepper_SetSpeed(8);
+//	Stepper_RotateAngle(15, STEPPER_BACKWARD);
+	ArmWave();
+	//Stepper_RotateAngle(15, STEPPER_FORWARD);
   for(;;)
   {
 //		fsm_lib_return ret = main_ctrl_fsm(&main_ctrl_fsm_handle);
@@ -267,7 +265,6 @@ void Status_Task(void *argument)
   for(;;)
   {
 		//touch senior  todo
-		 
 		HAL_GPIO_TogglePin(GPIOF,GPIO_PIN_10);
 		osDelay(1000);
   }
