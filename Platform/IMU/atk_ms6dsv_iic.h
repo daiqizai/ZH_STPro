@@ -10,8 +10,8 @@
 /* ?? ?? */
 #define I2C_SCL_GPIO_Port GPIOB
 #define I2C_SDA_GPIO_Port GPIOB
-#define I2C_SCL_Pin GPIO_PIN_11
-#define I2C_SDA_Pin GPIO_PIN_10
+#define I2C_SCL_Pin GPIO_PIN_7
+#define I2C_SDA_Pin GPIO_PIN_6
 
 #define IIC_SCL_GPIO_PORT               I2C_SCL_GPIO_Port
 #define IIC_SCL_GPIO_PIN                I2C_SCL_Pin

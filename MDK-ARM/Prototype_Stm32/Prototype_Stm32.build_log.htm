@@ -5,32 +5,29 @@
 <h2>Tool Versions:</h2>
 IDE-Version: ¦ÌVision V5.40.0.0
 Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: HBS ZEHO, HBS, LIC=EPPLD-81LWQ-TLICD-897V2-3ATNE-7BDHN
+License Information: 155 ZEHO, 151, LIC=BUURY-ICK3P-CXLU6-D1301-CQL6M-Y609D
  
 Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.40.0.3
-Toolchain Path:  D:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 6 (build 750)
-Assembler:       Armasm.exe V5.06 update 6 (build 750)
-Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
-Library Manager: ArmAr.exe V5.06 update 6 (build 750)
-Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+Toolchain:       MDK-ARM Plus  Version: 5.40.0.3
+Toolchain Path:  C:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
 CPU DLL:         SARMCM3.DLL V5.40.0.3
 Dialog DLL:      DCM.DLL V1.17.5.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\ZEHO\Desktop\test\ZH_STPro\MDK-ARM\Prototype_Stm32.uvprojx
-Project File Date:  01/07/2026
+C:\Users\ZEHO\ZH_STPro\MDK-ARM\Prototype_Stm32.uvprojx
+Project File Date:  01/08/2026
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\ZEHO\AppData\Local\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Prototype_Stm32'
-Note: source file '..\Platform\IMU\atk_ms6dsv.c' - object file renamed from 'Prototype_Stm32\atk_ms6dsv.o' to 'Prototype_Stm32\atk_ms6dsv_1.o'.
-Note: source file '..\Platform\IMU\atk_ms6dsv_iic.c' - object file renamed from 'Prototype_Stm32\atk_ms6dsv_iic.o' to 'Prototype_Stm32\atk_ms6dsv_iic_1.o'.
-Note: source file '..\Platform\IMU\lsm6dsv16x_reg.c' - object file renamed from 'Prototype_Stm32\lsm6dsv16x_reg.o' to 'Prototype_Stm32\lsm6dsv16x_reg_1.o'.
-compiling freertos.c...
+compiling demo.c...
 ../Platform/Motor/act.h(44): warning:  #1295-D: Deprecated declaration Car_Init - give arg types
   void Car_Init();
 ../Platform/Motor/act.h(45): warning:  #1295-D: Deprecated declaration GoAhead - give arg types
@@ -55,25 +52,13 @@ compiling freertos.c...
   void bsp_init();
 ../Code/user_main.h(45): warning:  #1295-D: Deprecated declaration user_main - give arg types
   void user_main();
-../Core/Src/freertos.c(164): warning:  #177-D: variable "rx_len"  was declared but never referenced
-    uint16_t rx_len;
-../Core/Src/freertos.c(300): warning:  #177-D: variable "I2C_data"  was declared but never referenced
-  	uint8_t I2C_data[10];
-../Core/Src/freertos.c(334): warning:  #111-D: statement is unreachable
-          break;
-../Core/Src/freertos.c(340): warning:  #111-D: statement is unreachable
-          break;
-../Core/Src/freertos.c(345): warning:  #111-D: statement is unreachable
-          break;
-../Core/Src/freertos.c(353): warning:  #111-D: statement is unreachable
-          break;
-../Core/Src/freertos.c(358): warning:  #111-D: statement is unreachable
-          break;
-../Core/Src/freertos.c: 19 warnings, 0 errors
+..\Core\Src\demo.c(205): warning:  #550-D: variable "temperature_degc"  was set but never used
+      float temperature_degc;
+..\Core\Src\demo.c: 13 warnings, 0 errors
 linking...
-Program Size: Code=26108 RO-data=908 RW-data=220 ZI-data=26660  
+Program Size: Code=25952 RO-data=908 RW-data=220 ZI-data=26684  
 FromELF: creating hex file...
-"Prototype_Stm32\Prototype_Stm32.axf" - 0 Error(s), 19 Warning(s).
+"Prototype_Stm32\Prototype_Stm32.axf" - 0 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -90,7 +75,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Prototype_Stm32
-  D:/Users/ZEHO/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+  C:/Users/ZEHO/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
 
 <h2>Collection of Component Files used:</h2>
 

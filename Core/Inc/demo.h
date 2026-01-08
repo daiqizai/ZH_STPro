@@ -23,4 +23,7 @@
 
 void demo_run(void);
 
+float* Get_Acc(void);
+float* Get_Ang(void);
+float Get_Acc_z(void);
 #endif

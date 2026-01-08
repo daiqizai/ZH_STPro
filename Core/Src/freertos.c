@@ -299,9 +299,13 @@ void StartImuTask(void *argument)
   /* USER CODE BEGIN StartImuTask */
 	uint8_t I2C_data[10];
 	demo_run();
+	//printf("%4.2f \n",Get_Acc()[2]);
+	float* acc= Get_Acc();
+	float a = acc[2];
   /* Infinite loop */
   for(;;)
   {
+		
 		//demo_run();
     osDelay(1);
   }

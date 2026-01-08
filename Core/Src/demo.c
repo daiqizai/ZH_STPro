@@ -189,6 +189,9 @@ static void demo_niming_report_status(int16_t rol, int16_t pit, int16_t yaw, uin
  * @param       нч
  * @retval      нч
  */
+ 
+ float acceleration_mg[3];
+ float angular_rate_mdps[3];
 void demo_run(void)
 {
     uint8_t ret;
@@ -198,8 +201,7 @@ void demo_run(void)
     int16_t data_raw_acceleration[3];
     int16_t data_raw_angular_rate[3];
     int16_t data_raw_temperature;
-    float acceleration_mg[3];
-    float angular_rate_mdps[3];
+    
     float temperature_degc;
     uint8_t times = 0;
 #endif /* DEMO_READ_DATA_POLLING */
@@ -379,10 +381,11 @@ void demo_run(void)
         if (++times == 20)
         {
             times = 0;
-            printf("\r\n******************************************\r\n");
-            printf("Acceleration[mg]: %4.2f %4.2f %4.2f\r\n", acceleration_mg[0], acceleration_mg[1], acceleration_mg[2]);
-            printf("Angular rate[mdps]: %4.2f %4.2f %4.2f\r\n", angular_rate_mdps[0], angular_rate_mdps[1], angular_rate_mdps[2]);
-            printf("Temperature[degC]: %6.2f\r\n", temperature_degc);
+           // printf("\r\n******************************************\r\n");
+          //printf("Acceleration[mg]: %4.2f %4.2f %4.2f\r\n", acceleration_mg[0], acceleration_mg[1], acceleration_mg[2]);
+					printf("%4.2f \n",acceleration_mg[2]/1000);
+            //printf("Angular rate[mdps]: %4.2f %4.2f %4.2f\r\n", angular_rate_mdps[0], angular_rate_mdps[1], angular_rate_mdps[2]);
+            //printf("Temperature[degC]: %6.2f\r\n", temperature_degc);
         }
         
         delay_ms(10);
@@ -1178,4 +1181,14 @@ void demo_run(void)
         }
     }
 #endif /* DEMO_FSM_4D */
+}
+
+float* Get_Acc(){
+	return acceleration_mg;
+}
+float Get_Acc_z(){
+	return acceleration_mg[2];
+}
+float* Get_Ang(){
+	return angular_rate_mdps;
 }
